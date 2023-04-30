@@ -27,16 +27,16 @@ function CheckoutProduct({
       hasPrime,
     };
     dispatch(addToBasket(product));
-  };
-  const removeItemFromBasket = () => {
-    console.log('id',id)
+  }
+  const removeItemFromBasket = (id) => {
+    // console.log('id',{id})
     dispatch(removeFromBasket({id}));
   };
   return (
     <div className="grid grid-cols-5 ">
       <Image src={image} height={200} width={200} objectFit="contain" />
       <div className="col-span-3  mx-5">
-        <p>{title}</p>
+        <p>{id}{title}</p>
         <div className="flex">
           {Array(rating)
             .fill()
@@ -66,7 +66,7 @@ function CheckoutProduct({
         <button className="button " onClick={addItemToBasket}>
           Add to basket
         </button>
-        <button className="button " onClick={removeItemFromBasket}>
+        <button className="button " onClick={()=>removeItemFromBasket(id)}>
           Remove from basket
         </button>
       </div>

@@ -4,7 +4,7 @@ import Image from "next/image";
 import { StarIcon } from "@heroicons/react/24/solid";
 import Currency from "react-currency-formatter";
 import { useDispatch } from "react-redux";
-import { addToBasket } from "@/slices/basketSlice";
+import { addToBasket,removeFromBasket } from "@/slices/basketSlice";
 const MAX_RATING = 5;
 const MIN_RATING = 1;
 
